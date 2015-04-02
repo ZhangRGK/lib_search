@@ -17,7 +17,10 @@ class SearchHandler(tornado.web.RequestHandler):
             self.render("index.html")
 
     def post(self):
-        pass
+        data = self.get_argument("value")
+        zpf = self.request
+        print 'zpf=',zpf
+        self.write("You  just   write  " + data)
 
 
 settings = {
